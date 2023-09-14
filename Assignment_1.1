@@ -1,0 +1,170 @@
+Find and read 20 interview questions for Data Types, Operators, Conditional Statements, Looping Statements, Functions.
+
+Data Types:
+
+1.Question: What is the difference between a list and a tuple
+Answer: Lists are mutable (can be modified), while tuples are immutable (cannot be modified).
+Example:
+my_list = [1, 2, 3]
+my_tuple = (1, 2, 3)
+my_list[0] = 4  # Valid for a list
+my_tuple[0] = 4  # Invalid for a tuple
+
+2.Question: Explain the difference between 'int' and 'float' data types.
+Answer: 'int' is used for integers (whole numbers), while 'float' is used for floating-point numbers (numbers with a decimal point).
+Example:
+my_int = 5
+my_float = 3.14
+
+3.Question: What is a string, and how can you create a multi-line string?
+Answer: A string is a sequence of characters. To create a multi-line string, use triple-quotes (''' or """).
+Example:
+multi_line_string = '''
+This is a
+multi-line
+string.
+'''
+
+4.Question: How can you convert a string to an integer or a float?
+Answer: You can use int() and float() functions for conversion.
+Example:
+str_num = "42"
+int_num = int(str_num)
+float_num = float(str_num)
+
+Operators:
+
+5.Question: Explain the difference between '==' and 'is' operators.
+Answer: '==' checks for equality of values, while 'is' checks if two objects are the same (reference the same memory location).
+Example:
+a = [1, 2, 3]
+b = a
+c = [1, 2, 3]
+print(a == b)  # True
+print(a is b)  # True
+print(a == c)  # True
+print(a is c)  # False
+
+6.Question: What is the purpose of the '//' operator?
+Answer: The '//' operator performs floor division, returning the largest integer less than or equal to the division result.
+Example:
+result = 7 // 2  # Result is 3
+
+7.Question: What does the '%' operator do ?
+Answer: The '%' operator is used for finding the remainder in integer division.
+Example:
+remainder = 10 % 3 # remainder is 1
+
+8.Question: Explain the purpose of the 'in' operator.
+Answer: The 'in' operator is used to check if an element is present in a sequence (e.g., list, string).
+Example:
+my_list = [1, 2, 3, 4, 5]
+is_present = 3 in my_list  # True
+is_present = 6 in my_list  # False
+
+Conditional Statements:
+
+9.Question: What is the difference between 'if', 'elif', and 'else' in conditional statements?
+Answer: 'if' is used for the main condition, 'elif' for additional conditions, and 'else' for a fallback condition if none of the previous conditions are met.
+Example:
+x = 10
+if x > 10:
+    print("x is greater than 10")
+elif x < 10:
+    print("x is less than 10")
+else:
+    print("x is equal to 10")
+
+10.Question: How can you use the ternary conditional operator?
+Answer: You can use the ternary operator to write concise 'if-else' statements.
+Example:
+age = 18
+message = "Adult" if age >= 18 else "Minor"
+
+11.Question: What is the purpose of the 'pass' statement?
+Answer: The 'pass' statement is a placeholder that does nothing. It's often used when syntactically required but no action is needed.
+Example:
+if condition:
+    pass  # Placeholder for future code
+else:
+    print("Condition is false")
+
+12.Question: How can you check if a value is None?
+Answer: Use 'is' or 'is not' to check for None.
+Example:
+value = None
+if value is None:
+    print("Value is None")
+
+Looping Statements:
+
+13.Question: What is the difference between 'for' and 'while' loops?
+Answer: 'for' loops are used for iterating over sequences, 'while' while loops are used for repeated execution as long as a condition is true.
+Example:
+for i in range(5):
+    print(i)  # Prints 0 to 4
+
+x = 5
+while x > 0:
+    print(x)  # Prints 5 to 1
+    x -= 1
+
+14.Question: How can you exit a loop prematurely?
+Answer: You can use 'break' to exit a loop before it completes its normal iteration.
+Example:
+for i in range(10):
+    if i == 5:
+        break  # Exits the loop when i is 5
+
+15.Question: What does the continue statement do in loops?
+Answer: The continue statement skips the current iteration and moves to the next iteration of the loop.
+Example:
+for i in range(5):
+    if i == 2:
+        continue  # Skips iteration when i is 2
+    print(i)  # Prints 0, 1, 3, 4
+
+16.Question: How can you iterate over both the 'index' and 'value' of a list in a for loop?
+Answer: You can use the enumerate() function.
+Example:
+my_list = ['a', 'b', 'c']
+for index, value in enumerate(my_list):
+    print(f"Index: {index}, Value: {value}")
+
+Functions:
+
+17.Question: What is the purpose of a function?
+Answer: Functions are reusable blocks of code that perform a specific task. They help in modularizing code.
+Example:
+def greeting(name):
+    print(f"Hello, {name}!")
+
+greeting("Alice")
+
+18.Question: Explain the difference between 'parameters' and 'arguments' in a function.
+Answer: 'Parameters' are placeholders in the function definition, while 'arguments' are the actual values passed to the function.
+Example:
+def add(a, b):  # a and b are parameters
+    return a + b
+
+result = add(3, 4)  # 3 and 4 are arguments
+
+19.Question: What is a docstring, and why is it used in functions?
+Answer: A docstring is a string that provides documentation for a function. It is placed in triple-quotes immediately after the function definition and 
+helps users understand the purpose and usage of the function.
+Example:
+def my_function():
+    """
+    This is a docstring.    
+    It explains what my_function does.
+    """
+    # Function code here
+
+20.Question: How can you return multiple values from a Python function?
+Answer: You can return multiple values as a tuple, and then unpack them when calling the function.
+Example:
+def calculate(a, b):
+    sum_result = a + b
+    product_result = a * b
+    return sum_result, product_result
+s, p = calculate(3, 4)  # Unpacking the tuple
